@@ -1,0 +1,53 @@
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>動態網站範例</title>
+    <style>
+        body { font-family: Arial; padding: 40px; }
+        .message-box { 
+            background: #86d2ec; 
+            padding: 10px; 
+            margin: 10px ;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>動態網站範例</h1>
+  
+    <!-- 顯示 Python 變數 -->
+    <p>現在時間：<strong>{{ time }}</strong></p>
+    <p>你是第 <strong>{{ count }}</strong> 位訪客</p>
+    <p>老闆是 <strong>{{ boss }}</strong></p>
+    <p>{{ boss | upper }}</p>
+    <p>{{ boss | lower }}</p>
+    <p>共有 {{ messages | length }} 則最新訊息</p>
+    <p>最新訊息 <strong>{{ messages }}</strong></p>
+    <p>姓名：{{ customer.name }}</p>
+    <p>年齡：{{ customer["age"] }}</p>
+    <hr>
+
+
+    <!-- 直接寫在 HTML 裡 -->
+    <p>現在時間：<strong>14:30:25</strong></p>
+    <p>你是第 <strong>42</strong> 位訪客</p>
+ 
+    <hr>
+
+    <h2>最新消息：</h2>
+    <!-- Python 列表變成 HTML 清單 -->
+    {% for message in messages %}
+        <div class="message-box">{{ message }}</div>
+    {% endfor %}
+    
+    <hr>
+    <!-- 條件判斷 -->
+    {% if count > 50 %}
+        <p style="color: green;"> 今天很熱鬧呢！</p>
+    {% else %}
+        <p style="color: blue;"> 歡迎你的到來！</p>
+    {% endif %}
+</body>
+</html>
