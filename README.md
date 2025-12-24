@@ -11,8 +11,8 @@
 點開 .ipynb 檔案即可瀏覽教學內容
 
 ### 方式二：本機執行（推薦教學）
-**```git clone https://github.com/betty0117/Python_notebook.git```
-**```cd Python_notebook```
+** ```git clone https://github.com/betty0117/Python_notebook.git```
+** ```cd Python_notebook```
 
 
 使用：
